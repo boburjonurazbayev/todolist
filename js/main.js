@@ -104,7 +104,7 @@ const handleDeleteTodo = (id, array) => {
 
 const handleEditTodo = (id, array, value) => {
   array.map((todo) => {
-    if (todo.id === id) {
+    if (todo.id === id && value.trim()) {
       todo.title = value;
     }
 
