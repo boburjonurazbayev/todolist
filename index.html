@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="css/main.css" />
+    <title>Document</title>
+  </head>
+  <body>
+    <main class="main">
+      <div class="container">
+        <form class="todo__form">
+          <input
+            class="todo__add-input"
+            type="text"
+            placeholder="new todo ..."
+          />
+
+          <button type="submit">Add</button>
+        </form>
+
+        <ul class="todos"></ul>
+
+        <div class="btns">
+          <button class="btn-all">
+            All <strong class="btn-all-text">0</strong>
+          </button>
+          <button class="btn-completed">
+            Completed <strong class="btn-completed-text">0</strong>
+          </button>
+          <button class="btn-uncompleted">
+            Uncompleted <strong class="btn-uncompleted-text">0</strong>
+          </button>
+
+          <button class="btn-clear">Clear</button>
+        </div>
+      </div>
+    </main>
+
+    <!-- modal -->
+
+    <div class="modal">
+      <div class="modal__main">
+        <button class="modal__close-btn">&times;</button>
+
+        <form id="modalForm">
+          <input id="modalInput" type="text" placeholder="todo ..." required />
+
+          <button type="submit">Edit</button>
+        </form>
+      </div>
+    </div>
+
+    <!-- todo template -->
+
+    <template id="todo-template">
+      <li class="todo">
+        <div class="todo__main">
+          <input class="todo__check-input" type="checkbox" />
+
+          <span class="todo__title">Bnmma</span>
+        </div>
+
+        <div class="todo_buttons">
+          <button class="todo__edit-btn">Edit</button>
+
+          <button class="todo__delete-btn">Delete</button>
+        </div>
+      </li>
+    </template>
+
+    <script src="js/utils.js"></script>
+    <script src="js/main.js"></script>
+  </body>
+</html>
